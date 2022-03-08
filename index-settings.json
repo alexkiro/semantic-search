@@ -1,0 +1,37 @@
+{
+  "mappings": {
+    "dynamic": false,
+    "properties": {
+      "topic": {
+        "type": "keyword"
+      },
+      "id": {
+        "type": "keyword"
+      },
+      "fulltext": {
+        "type": "text"
+      },
+      "creator": {
+        "type": "keyword"
+      },
+      "embeddings": {
+        "type": "nested",
+        "properties": {
+          "vector": {
+            "type": "dense_vector",
+            "dims": 512
+          }
+        }
+      },
+      "sentence_embeddings": {
+        "type": "nested",
+        "properties": {
+          "vector": {
+            "type": "dense_vector",
+            "dims": 512
+          }
+        }
+      }
+    }
+  }
+}
